@@ -6,16 +6,17 @@ class Course:
     def __str__(self):
         return self.course_name
 
+    # Student Class
+    def show_all_students(self):
+        try:
+            with open("students.txt", "r", encoding="utf-8") as file:
+                print("\n All Enrolled Students:\n")
+                for line in file:
+                    print(line.strip())
+        except FileNotFoundError:
+            print(" No student data found!")
 
-# Student Class
-def show_all_students():
-    try:
-        with open("students.txt", "r", encoding="utf-8") as file:
-            print("\n All Enrolled Students:\n")
-            for line in file:
-                print(line.strip())
-    except FileNotFoundError:
-        print(" No student data found!")
+
 
 
 class Student:
@@ -54,8 +55,8 @@ student1.enroll_course(course2)
 
 student2.enroll_course(course1)
 
-# Show all students from the file
-show_all_students()
+# Show all students from file
+course1.show_all_students()
 
 # Access password using getter
 print("\n Rahim Password (using getter):", student1.get_password())
