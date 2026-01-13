@@ -8,6 +8,16 @@ class Course:
 
 
 # Student Class
+def show_all_students():
+    try:
+        with open("students.txt", "r", encoding="utf-8") as file:
+            print("\n All Enrolled Students:\n")
+            for line in file:
+                print(line.strip())
+    except FileNotFoundError:
+        print(" No student data found!")
+
+
 class Student:
     def __init__(self, name, roll, password):
         self.name = name
@@ -28,17 +38,6 @@ class Student:
         return self.__password
 
 
-# Function to read data from file
-def show_all_students():
-    try:
-        with open("students.txt", "r", encoding="utf-8") as file:
-            print("\n All Enrolled Students:\n")
-            for line in file:
-                print(line.strip())
-    except FileNotFoundError:
-        print(" No student data found!")
-
-
 # ------------------ Main Program ------------------
 
 # Create courses
@@ -55,7 +54,7 @@ student1.enroll_course(course2)
 
 student2.enroll_course(course1)
 
-# Show all students from file
+# Show all students from the file
 show_all_students()
 
 # Access password using getter
