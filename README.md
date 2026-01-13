@@ -67,7 +67,7 @@ school-management-system/
 
 2. Navigate to the project folder
    ```bash
-   cd school-management-system
+   cd School-Management-System
    ```
 
 3. Run the Python file
@@ -89,4 +89,5 @@ Access using getter method:
 def get_password(self):
     return self.__password
 ```
+
 
