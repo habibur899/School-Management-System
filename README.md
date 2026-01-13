@@ -62,7 +62,7 @@ school-management-system/
 
 1. Clone the repository
    ```bash
-   git clone https://github.com/habibur899/school-management-system.git
+   git clone https://github.com/habibur899/School-Management-System.git
    ```
 
 2. Navigate to the project folder
@@ -89,3 +89,4 @@ Access using getter method:
 def get_password(self):
     return self.__password
 ```
+
